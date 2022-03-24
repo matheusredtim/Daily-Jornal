@@ -1,0 +1,38 @@
+<%- include('partials/header'); -%>
+
+<script>
+ 
+</script>
+
+
+<h1>   Home </h1>
+<p><%= texto %> </p>
+
+    
+    <!-- <%for(let i = 0; i < posts.length ; i++) { %>
+        <h1> 
+            <%=posts[i].title %>
+        </h1>
+        <p>
+            <%=posts[i].texto %>
+        </p>
+        <% } %> -->
+  
+    <% posts.forEach(i => { %>
+        <h1> 
+            <%=i.title %>
+        </h1>
+        <p>
+            <%= i.texto.substring(0, 100) +'...'%>
+            <a href="posts/<%=i.title %>">Ler Mais</a>
+        </p>
+        <% }); %>
+  
+        <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis porro nemo accusamus distinctio alias ab doloribus deserunt aperiam laudantium vero. Accusantium mollitia corporis quod eaque possimus, id delectus excepturi deleniti. -->
+
+
+
+
+
+
+<%- include('partials/footer'); -%>
